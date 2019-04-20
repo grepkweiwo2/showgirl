@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title></title>
+      
+       <style>
+            #myDiv{
+                left: 5px;
+         
+                position: fixed;
+            }
+			
+			div.fixed {
+			  position: fixed;
+			  left: 10px;
+			  top:0px;
+			  
+			}
+			
+        </style>
+
+    </head>
+
+    <body bgcolor="white">
+
+
+<div >
+<table id="myDiv" width="330%" ><tr>
+<td><img width="100%" src="https://lovenight.cdn.bcebos.com/previewallfinaloo.jpg" border=0></td>
+</tr></table>
+</div>
+
+        <script type="text/javascript">
+
+
+
+var dragFlag = false;
+var x,y,xo,yo;
+var ref;
+var first_touch=0;
+var offset;
+            var obj = document.getElementById('myDiv');
+var max_left=document.body.clientWidth-obj.offsetWidth;
+offset=obj.offsetLeft;
+
+           obj.addEventListener('touchstart', function(event) {
+var touch = event.targetTouches[0];
+ x = touch.pageX - obj.offsetLeft;
+ xo=touch.pageX;
+ yo=touch.pageY;
+    dragFlag = true;
+    first_touch=0;
+           }, false);
+
+
+            obj.addEventListener('touchmove', function(event) {
+if (dragFlag==true) {
+               
+                 if(event.targetTouches.length == 1) {　
+                 
+                  if(first_touch<3)
+                  event.preventDefault();
+				  
+                  first_touch++;
+                    
+                    var touch = event.targetTouches[0];
+                    
+                    if(Math.abs(touch.pageX-xo)>Math.abs(touch.pageY-yo))　
+　　                {
+                    event.preventDefault(); 
+                    
+				    offset=offset+1*(touch.pageX - xo);
+					
+				 if(offset<0&&offset>max_left*0.95)
+                    obj.style.left =offset + 'px';
+					else offset=offset-2*(touch.pageX - xo);
+					
+                   }
+                    xo=touch.pageX;
+					yo=touch.pageY;
+                }
+}
+            }, false);
+
+
+obj.addEventListener('touchend', function(event) {
+
+    dragFlag = false;
+
+           }, false);
+
+
+        </script>
+    </body>
+
+</html>
