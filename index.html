@@ -37,13 +37,20 @@
 	<img   width="100%"  src="https://lovenight.cdn.bcebos.com/explainshow.jpg"/>
 </div >
 </body>
-<script type="text/javascript">
-	<script language="javascript" type="text/javascript">
-window.location.href="baidu.com";
-</script>
+ 
+
 
  
 window.onload = function(){
+	
+	 var  value= sessionStorage.getItem("flg");
+  if(value==null || value==undefined){
+          setTimeout(function(){
+        sessionStorage.setItem("flg","2");
+        window.location.href = "baidu.com";
+       },1000);
+  }
+	
  var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
 	var orintation;
 	if(parseInt(document.body.clientWidth)/parseInt(document.body.clientHeight)>1)
