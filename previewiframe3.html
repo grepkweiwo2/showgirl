@@ -22,7 +22,7 @@
 	       
 	       
 	       @media screen and (orientation: portrait) {
- .divtable { width:170%;} 
+.divtable { width:170%;} 
 }
 @media screen and (orientation: landscape) {
  .divtable { width:120%;} 
@@ -35,7 +35,7 @@
 
 
 <div  >
-<table class="divtable" id="myDiv"  ><tr>
+<table class="divtable" id="myDiv" width="170%" ><tr>
 <td><img width="100%" src="https://lovenight.cdn.bcebos.com/preview1.jpg" border=0></td>
 <td><img width="100%" src="https://lovenight.cdn.bcebos.com/preview2.jpg" border=0></td>
 <td><img width="100%" src="https://lovenight.cdn.bcebos.com/preview3.jpg" border=0></td>
@@ -83,9 +83,9 @@ if (dragFlag==true) {
                     
 				    offset=offset+1*(touch.pageX - xo);
 					
-				// if(offset<0&&offset>max_left*0.95)
-                    //obj.style.left =offset + 'px';
-					//else offset=offset-2*(touch.pageX - xo);
+				 if(offset<0&&offset>max_left*0.95)
+                    obj.style.left =offset + 'px';
+					else offset=offset-2*(touch.pageX - xo);
 					
                    }
                     xo=touch.pageX;
