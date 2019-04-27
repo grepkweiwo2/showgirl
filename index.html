@@ -39,16 +39,7 @@
 </body>
 <script type="text/javascript">
 	var orintation;
-	window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
-        if (window.orientation === 180 || window.orientation === 0) {
-            
-		orintation=1;
-        }
-        if (window.orientation === 90 || window.orientation === -90 ){
-            
-		orintation=2;
-        } 
-    }, false);
+	
   alert("ok");
 window.onload = function(){
  var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
