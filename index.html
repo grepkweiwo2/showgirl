@@ -8,7 +8,7 @@
 
 @media screen and (orientation: portrait) {
  .divbanner img{ width:100%;} 
-	.iframe {src:baidu.com;} 
+	
 }
 @media screen and (orientation: landscape) {
   .divbanner img{ width:50%;
@@ -34,14 +34,15 @@
 </div >
 
 	
-<iframe class="iframe" id="imgexplain" frameborder="0" width="100%"></iframe>
+<iframe class="iframe" id="imgexplain" frameborder="0" width="100%" src="previewiframe3.html"></iframe>
 <div >
 	<img   width="100%"  src="https://lovenight.cdn.bcebos.com/explainshow.jpg"/>
 </div >
 </body>
 <script type="text/javascript">
 	
-  
+  window.frames['iframe'].document.getElementsByClassName("divtable").item(0).width = "50%";
+
     
 	var divpreview=document.getElementById("imgexplain");
 divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*2+"px";
