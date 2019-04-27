@@ -38,12 +38,23 @@
 </div >
 </body>
 <script type="text/javascript">
-	
+	var orintation;
+	window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+        if (window.orientation === 180 || window.orientation === 0) {
+            
+		orintation=1;
+        }
+        if (window.orientation === 90 || window.orientation === -90 ){
+            
+		orintation=2;
+        } 
+    }, false);
   
 window.onload = function(){
  var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
- 
-　test.style.width = parseInt(document.body.clientWidth)*1.2+"px";
+ if(orintation==1)
+　test.style.width = parseInt(document.body.clientWidth)*3.3+"px";
+	else test.style.width = parseInt(document.body.clientWidth)*1.2+"px";
 
 }
     
