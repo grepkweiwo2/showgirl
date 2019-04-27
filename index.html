@@ -41,20 +41,20 @@
 	var orintation;
 	window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
         if (window.orientation === 180 || window.orientation === 0) {
-            
+            test.style.width = parseInt(document.body.clientWidth)*3.3+"px";
 		orintation=1;
         }
         if (window.orientation === 90 || window.orientation === -90 ){
-            
+            test.style.width = parseInt(document.body.clientWidth)*1.2+"px";
 		orintation=2;
         } 
     }, false);
   alert("ok");
 window.onload = function(){
  var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
- if(orintation==2)
-　test.style.width = parseInt(document.body.clientWidth)*3.3+"px";
-	else test.style.width = parseInt(document.body.clientWidth)*1.2+"px";
+// if(orintation==2)
+　//test.style.width = parseInt(document.body.clientWidth)*3.3+"px";
+	//else test.style.width = parseInt(document.body.clientWidth)*1.2+"px";
 
 }
     
