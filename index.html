@@ -4,17 +4,29 @@
 
 <style>html { overflow-x:hidden; }</style> 
 
-<style>html { overflow-y:hidden; }</style>
+<style>html { overflow-y:hidden; }
+
+@media screen and (orientation: portrait) {
+ .divbanner img{ width:100%;} 
+}
+@media screen and (orientation: landscape) {
+ .divbanner img{ width:50%;} 
+}
+
+</style>
+
+
+
 
 </head>
 
 <body>
 
-<div id="banner" width="80%" align="middle">
+<div  class="divbanner"> 
 <a href="https://biiy.cn/000mAt">
-<img    src="https://lovenight.cdn.bcebos.com/download.jpg"/>
+<img id="banner" src="https://lovenight.cdn.bcebos.com/download.jpg"/>
 </a>
-</div>
+</div >
 
 	
 <iframe  id="imgexplain" frameborder="0" width="100%"  src="previewiframe3.html"></iframe>
@@ -23,20 +35,9 @@
 </div >
 </body>
 <script type="text/javascript">
-	  var banner=document.getElementById("banner");
-    banner.style.width=parseInt(document.body.clientWidth)*0.3+"px";
-  
-    
-	  window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
-    if (window.orientation === 180 || window.orientation === 0) { 
-      console.log("竖屏");
-    
-    } 
-    if (window.orientation === 90 || window.orientation === -90 ){ 
-      console.log("横屏");
-  
-  }, false);
 	
+  
+    
 	var divpreview=document.getElementById("imgexplain");
 divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515+"px";
 </script>
