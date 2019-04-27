@@ -23,7 +23,10 @@
 </div >
 </body>
 <script type="text/javascript">
-	
+	  var banner=document.getElementById("banner");
+    banner.style.height=parseInt(document.body.clientWidth)*0.3+"px";
+    } 
+    
 	  window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
     if (window.orientation === 180 || window.orientation === 0) { 
       console.log("竖屏");
@@ -31,9 +34,7 @@
     } 
     if (window.orientation === 90 || window.orientation === -90 ){ 
       console.log("横屏");
-    var banner=document.getElementById("banner");
-    banner.style.height=parseInt(document.body.clientWidth)*0.3+"px";
-    } 
+  
   }, false);
 	
 	var divpreview=document.getElementById("imgexplain");
