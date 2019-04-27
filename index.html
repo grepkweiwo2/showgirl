@@ -21,8 +21,6 @@
 </style>
 
 
-
-
 </head>
 
 <body>
@@ -41,8 +39,12 @@
 </body>
 <script type="text/javascript">
 	
-  window.frames['iframe'].document.getElementsByClassName("divtable").item(0).style.width = 50+"px";
-
+  
+window.onload = function(){
+ var test = document.getElementById('imgexplain').contentWindow.document.getElementById('divtableid');
+ 
+　test.style.width = 50+"px";;
+}
     
 	var divpreview=document.getElementById("imgexplain");
 divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*2+"px";
