@@ -48,6 +48,12 @@ var offset;
 var max_left=document.body.clientWidth-obj.offsetWidth;
 offset=obj.offsetLeft;
 
+		
+		var ratio=parseInt(document.getElementById('myDiv').style.width)/parseInt(document.body.clientWidth)
+		if(ratio<1){
+			max_left=0.2;
+		}
+		
            obj.addEventListener('touchstart', function(event) {
 var touch = event.targetTouches[0];
  x = touch.pageX - obj.offsetLeft;
@@ -76,7 +82,7 @@ if (dragFlag==true) {
                     
 				    offset=offset+1*(touch.pageX - xo);
 					
-				 if(offset<0&&offset>max_left*3.3)
+				 if(offset<0&&offset>max_left)
                     obj.style.left =offset + 'px';
 					else offset=offset-2*(touch.pageX - xo);
 					
