@@ -42,29 +42,10 @@
  
 
 <script type="text/javascript"> 
-	var or;
-	window.onload = function(){
-
-	
-	var orintation;
-	or=parseInt(document.body.clientWidth)/parseInt(document.body.clientHeight);
-	if(or>1)
-	orintation=1;	
-	else orintation=2;
-	　
- if(orintation==2)
-	 or=or;
-	else {
-		or=1/or;
-		}
-
-}
 	  
-	
+	var or=parseInt(document.body.clientWidth)/parseInt(document.body.clientHeight);
 function orientationChange() {
-
-		
-
+	
     switch(window.orientation) {
       
     　　case 0: 
