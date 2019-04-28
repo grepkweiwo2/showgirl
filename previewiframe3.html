@@ -47,25 +47,34 @@ var offset;
             var obj = document.getElementById('myDiv');
 var max_left,max_left0=document.body.clientWidth-obj.offsetWidth;
 offset=obj.offsetLeft;
-var ratio;
+var ratio,rotate;
 	var first=0;  	
 	var bodywidth=0;	
            obj.addEventListener('touchstart', function(event) {
 		   if(bodywidth!=parseInt(document.body.clientWidth))
+		   {
 			   first=0;
+			   if(rotate==0)
+			   rotate=2;
+		   }
 		   
 		   if(first==0){
 			bodywidth=parseInt(document.body.clientWidth);   
 	        ratio=document.getElementById('myDiv').offsetWidth/parseInt(document.body.clientWidth);
 
 		if(ratio<1.666){
+			if(rotate==2)
 			max_left=max_left0*0.45;
+			else max_left=max_left0*1.2;
 			
 		}else {
-			max_left=max_left0*1.8;
+			if(rotate==2)
+			max_left=max_left0*1.2;
+			else max_left=max_left0*0.45;
 		
 		}
 			   first++;
+			   rotate=1;
 	   }
 		   var touch = event.targetTouches[0];
  x = touch.pageX - obj.offsetLeft;
