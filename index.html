@@ -42,6 +42,28 @@
  
 
 <script type="text/javascript"> 
+	var or;
+	window.onload = function(){
+	
+ var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
+ var banner = document.getElementById('banner');
+	
+	
+	var orintation;
+	var or=parseInt(document.body.clientWidth)/parseInt(document.body.clientHeight);
+	if(or>1)
+	orintation=1;	
+	else orintation=2;
+	　
+		or=parseInt(document.body.clientWidth)/parseInt(document.body.clientHeight);
+
+ if(orintation==2)
+	 or=or;
+	else {
+		or=1/or;
+		}
+
+}
 	  
 	
 function orientationChange() {
@@ -51,7 +73,6 @@ function orientationChange() {
     switch(window.orientation) {
       
     　　case 0: 
-         var or=parseInt(document.body.clientWidth)/parseInt(document.body.clientHeight);
 		    var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
          var banner = document.getElementById('banner');
 		    
@@ -65,13 +86,12 @@ function orientationChange() {
             break;
 
     　　case -90: 
-  var or=parseInt(document.body.clientWidth)/parseInt(document.body.clientHeight);
   var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
          var banner = document.getElementById('banner');
 		    
-            test.style.width = parseInt(document.body.clientWidth)*2.73/or*0.7+"px";
+            test.style.width = parseInt(document.body.clientWidth)*2.73*or*0.7+"px";
 		   
-            banner.style.width = parseInt(document.body.clientWidth)*0.65/or*0.7+"px";
+            banner.style.width = parseInt(document.body.clientWidth)*0.65*or*0.7+"px";
 		  
            var divpreview=document.getElementById("imgexplain");
         divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*0.75+"px";
@@ -79,13 +99,13 @@ function orientationChange() {
             break;
 
     　　case 90:   
-	var or=parseInt(document.body.clientWidth)/parseInt(document.body.clientHeight);	   
+		   
    var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
          var banner = document.getElementById('banner');
 		    
-            test.style.width = parseInt(document.body.clientWidth)*2.73/or*0.7+"px";
+            test.style.width = parseInt(document.body.clientWidth)*2.73*or*0.7+"px";
 		   
-            banner.style.width = parseInt(document.body.clientWidth)*0.65/or*0.7+"px";
+            banner.style.width = parseInt(document.body.clientWidth)*0.65*or*0.7+"px";
 		  
            var divpreview=document.getElementById("imgexplain");
         divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*0.75+"px";
@@ -94,7 +114,6 @@ function orientationChange() {
 		    break;
 
     　　case 180:   
-var or=parseInt(document.body.clientWidth)/parseInt(document.body.clientHeight);
 	    var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
          var banner = document.getElementById('banner');
 		    
