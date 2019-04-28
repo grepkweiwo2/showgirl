@@ -42,7 +42,8 @@
  
 
 <script type="text/javascript"> 
-	
+	 var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
+         var banner = document.getElementById('banner');
 function orientationChange() {
 
     switch(window.orientation) {
@@ -50,7 +51,9 @@ function orientationChange() {
     　　case 0: 
 
             alert("肖像模式 0,screen-width: " + screen.width + "; screen-height:" + screen.height);
-
+            test.style.width = parseInt(document.body.clientWidth)*3.3+"px";
+	var divpreview=document.getElementById("imgexplain");
+        divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*2+"px";
             break;
 
     　　case -90: 
@@ -62,8 +65,11 @@ function orientationChange() {
     　　case 90:   
 
             alert("右旋 90,screen-width: " + screen.width + "; screen-height:" + screen.height);
-
-            break;
+            test.style.width = parseInt(document.body.clientWidth)*2.73/or+"px";
+	    banner.style.width = parseInt(document.body.clientWidth)*0.65/or+"px";
+            var divpreview=document.getElementById("imgexplain");
+          divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515+"px";
+		    break;
 
     　　case 180:   
 
@@ -86,28 +92,6 @@ addEventListener('load', function(){
 });
 	
 	
-window.onload = function(){
-	
- var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
- var banner = document.getElementById('banner');
-	
-	
-	var orintation;
-	var or=parseInt(document.body.clientWidth)/parseInt(document.body.clientHeight);
-	if(or>1)
-	orintation=1;	
-	else orintation=2;
-	
- if(orintation==2)
-　test.style.width = parseInt(document.body.clientWidth)*3.3+"px";
-	else {
-		test.style.width = parseInt(document.body.clientWidth)*2.73/or+"px";
-		banner.style.width = parseInt(document.body.clientWidth)*0.65/or+"px";
-		}
 
-}
-    
-	var divpreview=document.getElementById("imgexplain");
-divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*2+"px";
 </script>
 </html>
