@@ -49,8 +49,8 @@ var max_left=document.body.clientWidth-obj.offsetWidth;
 offset=obj.offsetLeft;
 
 		
-		//var ratio=parseInt(document.getElementById('myDiv').style.width)/parseInt(document.body.clientWidth);
-		var ratio=document.getElementById('myDiv').offsetWidth;
+		var ratio=document.getElementById('myDiv').offsetWidth/parseInt(document.body.clientWidth);
+
 		if(ratio<1.666){
 			//max_left=;
 			alert(ratio);
