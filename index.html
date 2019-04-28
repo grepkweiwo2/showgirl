@@ -44,6 +44,7 @@
 <script type="text/javascript"> 
 	  
 	var or=parseInt(document.body.clientWidth)/parseInt(document.body.clientHeight);
+	if(or>1)
 	or=or*0.31;
 function orientationChange() {
 	
@@ -72,7 +73,7 @@ function orientationChange() {
 		  
            var divpreview=document.getElementById("imgexplain");
         divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*0.75+"px";
-		    alert("h");
+		   
             break;
 
     　　case 90:   
@@ -87,7 +88,7 @@ function orientationChange() {
            var divpreview=document.getElementById("imgexplain");
         divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*0.75+"px";
 		    
-		     alert("h");
+		     
 		    break;
 
     　　case 180:   
