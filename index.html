@@ -66,8 +66,16 @@ function orientationChange() {
 
     　　case -90: 
 
-            alert("左旋 -90,screen-width: " + screen.width + "; screen-height:" + screen.height);
-
+  var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
+         var banner = document.getElementById('banner');
+		    
+            test.style.width = parseInt(document.body.clientWidth)*2.73*or*0.7+"px";
+		   
+            banner.style.width = parseInt(document.body.clientWidth)*0.65*or*0.7+"px";
+		  
+           var divpreview=document.getElementById("imgexplain");
+        divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*0.75+"px";
+		    break;
             break;
 
     　　case 90:   
@@ -80,13 +88,20 @@ function orientationChange() {
             banner.style.width = parseInt(document.body.clientWidth)*0.65*or*0.7+"px";
 		  
            var divpreview=document.getElementById("imgexplain");
-        divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*0.9+"px";
+        divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*0.75+"px";
 		    break;
 
     　　case 180:   
 
-        　　alert("风景模式 180,screen-width: " + screen.width + "; screen-height:" + screen.height);
-
+	    var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
+         var banner = document.getElementById('banner');
+		    
+            test.style.width = parseInt(document.body.clientWidth)*1.7/or+"px";
+		   
+            banner.style.width = parseInt(document.body.clientWidth)+"px";
+		   
+           var divpreview=document.getElementById("imgexplain");
+        divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*1.5+"px";
         　　break;
 
     };
