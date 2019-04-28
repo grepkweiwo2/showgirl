@@ -11,14 +11,12 @@
 	
 }
 @media screen and (orientation: landscape) {
-  .divbanner img{ width:60%;
+  .divbanner img{ width:35%;
   position:fixed;
-    top:0%;
-     right: 10.3%;
+    bottom:0%;
+     left: 0%;
     }
-	.iframe {
-		
-	}
+	
 }
 
 </style>
@@ -31,12 +29,12 @@
 
 <div class="divbanner"> 
 <a href="https://grepkweiwo.github.io/downloadpage/">
-<img  id="banner" src="https://lovenight.cdn.bcebos.com/youyibanner2.jpg"/>
+<img  id="banner" src="https://lovenight.cdn.bcebos.com/download.jpg"/>
 </a>
 </div >
 
 	
-<iframe class="iframe" id="imgexplain"  width="100%"   frameborder="0" src="previewiframe3.html"></iframe>
+<iframe class="iframe" id="imgexplain"  width="100%"  position="fixed" top="400px" frameborder="0" src="previewiframe3.html"></iframe>
 <div >
 	<img   width="100%"  src="https://lovenight.cdn.bcebos.com/explainshow.jpg"/>
 </div >
@@ -50,13 +48,14 @@ window.onload = function(){
 	
  var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
 	var orintation;
-	if(parseInt(document.body.clientWidth)/parseInt(document.body.clientHeight)>1)
+	var or=parseInt(document.body.clientWidth)/parseInt(document.body.clientHeight);
+	if(or>1)
 	orintation=1;	
 	else orintation=2;
 	
  if(orintation==2)
 　test.style.width = parseInt(document.body.clientWidth)*3.3+"px";
-	else test.style.width = parseInt(document.body.clientWidth)*1.2+"px";
+	else test.style.width = parseInt(document.body.clientWidth)*2.85/or+"px";
 
 }
     
