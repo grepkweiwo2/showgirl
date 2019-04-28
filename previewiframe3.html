@@ -65,12 +65,18 @@ var ratio,rotate=2;
 		if(ratio<1.666){
 			if(rotate==2)
 			max_left=max_left0*0.45;
-			else max_left=max_left0*1.2;
+			else {
+				max_left=max_left0*1.2;
+				alert("ok");
+			}
 			
 		}else {
 			if(rotate==2)
 			max_left=max_left0*1.2;
-			else max_left=max_left0*0.45;
+			else {
+				max_left=max_left0*0.45;
+				alert("ok2");
+			}
 		
 		}
 			   first++;
