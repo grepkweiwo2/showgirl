@@ -49,9 +49,12 @@ var max_left=document.body.clientWidth-obj.offsetWidth;
 offset=obj.offsetLeft;
 var ratio;
 	var first=0;  	
-		
+	var bodywidth=0;	
            obj.addEventListener('touchstart', function(event) {
+		   if(bodywidth!=parseInt(document.body.clientWidth))first=0;
+		   
 		   if(first==0){
+			bodywidth=parseInt(document.body.clientWidth);   
 	        ratio=document.getElementById('myDiv').offsetWidth/parseInt(document.body.clientWidth);
 
 		if(ratio<1.666){
