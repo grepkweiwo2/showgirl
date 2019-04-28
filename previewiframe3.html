@@ -45,7 +45,7 @@ var ref;
 var first_touch=0;
 var offset;
             var obj = document.getElementById('myDiv');
-var max_left=document.body.clientWidth-obj.offsetWidth;
+var max_left,max_left0=document.body.clientWidth-obj.offsetWidth;
 offset=obj.offsetLeft;
 var ratio;
 	var first=0;  	
@@ -58,10 +58,10 @@ var ratio;
 	        ratio=document.getElementById('myDiv').offsetWidth/parseInt(document.body.clientWidth);
 
 		if(ratio<1.666){
-			max_left=max_left*0.45;
+			max_left=max_left0*0.45;
 			
 		}else {
-			max_left=max_left*1.2;
+			max_left=max_left0*1.2;
 		
 		}
 			   first++;
