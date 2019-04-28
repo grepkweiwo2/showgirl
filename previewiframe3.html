@@ -50,9 +50,9 @@ offset=obj.offsetLeft;
 
 		
 		var ratio=parseInt(document.getElementById('myDiv').style.width)/parseInt(document.body.clientWidth)
-		if(ratio<1){
-			max_left=max_left*0.02;
-		}else max_left=max_left*1.5;
+		if(ratio<1/2){
+			max_left=max_left*0.2;
+		}else max_left=max_left*1;
 		
            obj.addEventListener('touchstart', function(event) {
 var touch = event.targetTouches[0];
