@@ -51,7 +51,8 @@ var ratio;
 	var first=0;  	
 	var bodywidth=0;	
            obj.addEventListener('touchstart', function(event) {
-		   if(bodywidth!=parseInt(document.body.clientWidth))first=0;
+		   if(bodywidth!=parseInt(document.body.clientWidth))
+			   first=0;
 		   
 		   if(first==0){
 			bodywidth=parseInt(document.body.clientWidth);   
@@ -61,7 +62,7 @@ var ratio;
 			max_left=max_left0*0.45;
 			
 		}else {
-			max_left=max_left0*1.2;
+			max_left=max_left0*1.8;
 		
 		}
 			   first++;
