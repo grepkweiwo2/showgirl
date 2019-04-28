@@ -50,9 +50,10 @@ offset=obj.offsetLeft;
 var ratio,rotate==2;
 	var first=0;  	
 	var bodywidth=0;	
+		alert("ok");
            obj.addEventListener('touchstart', function(event) {
 		   if(bodywidth!=parseInt(document.body.clientWidth))
-		   {
+		   {    
 			   first=0;
 			   
 		   }
@@ -60,7 +61,7 @@ var ratio,rotate==2;
 		   if(first==0){
 			bodywidth=parseInt(document.body.clientWidth);   
 	                ratio=document.getElementById('myDiv').offsetWidth/parseInt(document.body.clientWidth);
-alert("ok");
+
 		if(ratio<1.666){
 			if(rotate==2)
 			max_left=max_left0*0.45;
