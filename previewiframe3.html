@@ -55,11 +55,11 @@ var ratio;
 	        ratio=document.getElementById('myDiv').offsetWidth/parseInt(document.body.clientWidth);
 
 		if(ratio<1.666){
-			//max_left=;
-			alert(ratio);
+			max_left=max_left*0.2;
+			
 		}else {
 			max_left=max_left*1.25;
-		alert(ratio);
+		
 		}
 		   
 		   var touch = event.targetTouches[0];
