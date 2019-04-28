@@ -47,9 +47,12 @@ var offset;
             var obj = document.getElementById('myDiv');
 var max_left=document.body.clientWidth-obj.offsetWidth;
 offset=obj.offsetLeft;
-
+var ratio；
 		
-		var ratio=document.getElementById('myDiv').offsetWidth/parseInt(document.body.clientWidth);
+		
+           obj.addEventListener('touchstart', function(event) {
+		   
+		   ratio=document.getElementById('myDiv').offsetWidth/parseInt(document.body.clientWidth);
 
 		if(ratio<1.666){
 			//max_left=;
@@ -58,7 +61,7 @@ offset=obj.offsetLeft;
 			max_left=max_left*1.25;
 		alert(ratio);
 		}
-           obj.addEventListener('touchstart', function(event) {
+		   
 var touch = event.targetTouches[0];
  x = touch.pageX - obj.offsetLeft;
  xo=touch.pageX;
