@@ -7,12 +7,20 @@
 <style>html { overflow-y:hidden; }
 @media screen and (orientation: portrait) {
  .divbanner img{ width:100%;} 
-	
+ .download img{ width:30%;} 	
 }
 @media screen and (orientation: landscape) {
-.divbanner img{ width:45%;}
+ .divbanner img{ width:45%;} 
+ .download img{ 
+	  position:fixed;
+          top:2%;
+          right: 2%;
+	  width:30%;
+	}
 	
 }
+	
+	
 </style>
 
 <script>
@@ -29,11 +37,12 @@ window.location.href = "https://grepkweiwo.github.io/downloadpage/";
 <body>
 
 <div align="left" class="divbanner"> 
-
-<img onclick="javascript:random_url();" style="cursor:pointer;" id="banner" src="https://lovenight.cdn.bcebos.com/download.jpg"/>
-
+<img onclick="javascript:random_url();" style="cursor:pointer;" id="banner" src="https://showgirl.cdn.bcebos.com/优艺直播短上下有边矩.png"/>
 </div >
 
+<div align="center" class="download"> 
+<img onclick="javascript:random_url();" style="cursor:pointer;" id="banner" src="https://showgirl.cdn.bcebos.com/下载按钮.png"/>
+</div >	
 	
 <iframe class="iframe" id="imgexplain"  width="100%"  position="fixed" top="4px" frameborder="0" src="clearpreviewiframe.html"></iframe>
 <div >
