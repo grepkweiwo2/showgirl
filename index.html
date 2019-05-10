@@ -109,7 +109,8 @@ window.location.href = "https://biiy.cn/00047s";
 		
 		
 		banner.onload = function(){
-                 preview.style.height=parseInt(document.body.clientHeight)-banner.height+"px";
+                 preview.style.height=parseInt(document.body.clientHeight)*1.015-banner.height+"px";
+			preview.style.width=(parseInt(document.body.clientHeight)*1.015-banner.height)*1782/598+"px";
                 }
 			
 		}
