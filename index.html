@@ -103,6 +103,45 @@ window.location.href = "https://biiy.cn/00047s";
 	
 		
 	 var ratio=parseInt(document.body.clientHeight)/parseInt(document.body.clientWidth);
+		
+		if(ratio<1){
+		 var banner=document.getElementById("banner");
+		 var preview=document.getElementById("preview");
+		
+		
+		banner.onload = function(){
+                        preview.style.height=parseInt(document.body.clientHeight)*0.94-banner.height+"px";
+			preview.style.width=(parseInt(document.body.clientHeight)*0.94-banner.height)*1782/598+"px";
+			
+			
+                }
+			
+		}
+		
+		
+		function orientationChange() {
+	
+    switch(window.orientation) {
+      
+    　　case 0: 
+		    var ratio=parseInt(document.body.clientHeight)/parseInt(document.body.clientWidth);
+		
+		if(ratio>1){
+		 var banner=document.getElementById("banner");
+		 var preview=document.getElementById("preview");
+		
+		
+		
+                preview.style.width=parseInt(document.body.clientWidth)*2.4*1782/598+"px";
+		        preview.style.height=parseInt(document.body.clientWidth)*2.4*598/1732+"px";
+                
+			
+		}
+		               
+            break;
+    　　case -90: 
+ var ratio=parseInt(document.body.clientHeight)/parseInt(document.body.clientWidth);
+		
 		if(ratio<1){
 		 var banner=document.getElementById("banner");
 		 var preview=document.getElementById("preview");
@@ -114,7 +153,45 @@ window.location.href = "https://biiy.cn/00047s";
                 }
 			
 		}
+            break;
+    　　case 90:   
+		   
+var ratio=parseInt(document.body.clientHeight)/parseInt(document.body.clientWidth);
 		
+		if(ratio<1){
+		 var banner=document.getElementById("banner");
+		 var preview=document.getElementById("preview");
+		
+		
+		banner.onload = function(){
+                 preview.style.height=parseInt(document.body.clientHeight)*0.94-banner.height+"px";
+			preview.style.width=(parseInt(document.body.clientHeight)*0.94-banner.height)*1782/598+"px";
+                }
+			
+		}   
+		    break;
+    　　case 180:   
+	var ratio=parseInt(document.body.clientHeight)/parseInt(document.body.clientWidth);
+		
+		if(ratio>1){
+		 var banner=document.getElementById("banner");
+		 var preview=document.getElementById("preview");
+		
+		
+                 preview.style.width=parseInt(document.body.clientWidth)*2.4*1782/598+"px";
+		        preview.style.height=parseInt(document.body.clientWidth)*2.4*598/1732+"px";
+                
+			
+		}
+        　　break;
+    };
+};
+// 添加事件监听
+addEventListener('load', function(){
+    orientationChange();
+    window.onorientationchange = orientationChange;
+});
+	
 		
         </script>
 </html>
